@@ -23,8 +23,8 @@ import Button from '@mui/material/Button';
               },
   });
     const fetchNews= async () => {
-        // const {data}= await axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&page=${page}&category=entertainment&apiKey=6572fbb6c1744c279dd5b82448266c97`);
-        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=017b7f6df30c6494b6043876addec138&lang=en&country=in&topic=entertainment&page=${page}`);
+        
+        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=${process.env.React_App_NEWAPI}&lang=en&country=in&topic=entertainment&page=${page}`);
        // the above line fetches the data from the tmdb api.
        //used to set content as data.results numberOfPages as data.total_pages.
        console.log(data);
