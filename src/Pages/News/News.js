@@ -24,7 +24,7 @@ import Button from '@mui/material/Button';
   });
     const fetchNews= async () => {
         
-        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=${process.env.React_App_NEWAPI}&lang=en&country=in&topic=entertainment&page=${page}`);
+        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=${process.env.React_App_NEWAPI}&lang=en&country=${country}&topic=entertainment&page=${page}`);
        // the above line fetches the data from the tmdb api.
        //used to set content as data.results numberOfPages as data.total_pages.
        console.log(data);
