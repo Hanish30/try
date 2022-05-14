@@ -24,7 +24,7 @@ import Button from '@mui/material/Button';
   });
     const fetchNews= async () => {
         
-        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=${process.env.React_App_NEWAPI}&lang=en&country=${country}&topic=entertainment&page=${page}`);
+        const {data}= await axios.get(`https://gnews.io/api/v4/top-headlines?token=017b7f6df30c6494b6043876addec138&lang=en&country=${country}&topic=entertainment&page=${page}`);
        // the above line fetches the data from the tmdb api.
        //used to set content as data.results numberOfPages as data.total_pages.
        console.log(data);
@@ -33,6 +33,7 @@ import Button from '@mui/material/Button';
         setNumberOfPages(Math.floor(20/20));
     }
     useEffect(() => {
+      window.scroll(0,0);
         fetchNews();
         // eslint-disable-next-line
     }, [page])
