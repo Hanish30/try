@@ -27,7 +27,7 @@ const Search = () => {
     const fetchSearch= async () => {
         if(searchText.length>0)
         {
-            const {data} =await axios.get(`https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=${process.env.React_App_API_KEY}&language=en-US&query=${searchText}&page=${page}`);
+            const {data} =await axios.get(`https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=1cf50e6248dc270629e802686245c2c8&language=en-US&query=${searchText}&page=${page}`);
             // the above line fetches the data from the tmdb api.
            //used to set content as data.results
             setContent(data.results);
