@@ -11,13 +11,14 @@ const Trending = () => {
     const numOfPages=10;
     const fetchTrending = async () => {
      const { data } = await axios.get(
-        `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.React_App_API_KEY}&page=${page}`);
+        `https://api.themoviedb.org/3/trending/all/day?api_key=1cf50e6248dc270629e802686245c2c8&page=${page}`);
     
     // the above line fetches the data from the tmdb api.
     //used to set content as data.results
     setContent(data.results);
     }
     useEffect(() => {
+        window.scroll(0,0);
         fetchTrending();
         // eslint-disable-next-line 
     }, [page]);
