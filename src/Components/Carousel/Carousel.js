@@ -35,7 +35,7 @@ const Carousel = ({media_type,id}) => {
         },
     }
     const fetchCredits= async () => {
-        const {data}=await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${process.env.React_App_API_KEY}&language=en-US`);
+        const {data}=await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=1cf50e6248dc270629e802686245c2c8&language=en-US`);
         //fetch the data from tmdb api and set it to credits hook.
         setCredits(data.cast);
     }
