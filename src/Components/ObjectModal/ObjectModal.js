@@ -43,12 +43,12 @@ export default function ObjectModal({children,media_type,id}) {
   const [video, setVideo] = useState([]);
 
   const fetchData = async() => {
-    const {data}=await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.React_App_API_KEY}&language=en-US`);
+    const {data}=await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=1cf50e6248dc270629e802686245c2c8&language=en-US`);
     //fetch the data from tmdb api and set it in content hook.
     setContent(data);
   }
   const fetchVideo = async () => {
-         const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.React_App_API_KEY}&language=en-US`);
+         const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=1cf50e6248dc270629e802686245c2c8&language=en-US`);
          //fetch the data about video of trailers from tmdb api and set it in video hook.
          setVideo(data.results[0]?.key);
      };
