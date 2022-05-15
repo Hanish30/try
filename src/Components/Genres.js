@@ -12,7 +12,7 @@ const Genres = ({
 }) => {
     const [content,setContent]=useState([]);
      const fetchGenres = async () => {
-         const { data } =await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.React_App_API_KEY}&language=en-US`);
+         const { data } =await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=1cf50e6248dc270629e802686245c2c8&language=en-US`);
          setNormalGenres(data.genres);
          //data stores the results we get from api call and sets data.genres in normalGenres hook.
         }
